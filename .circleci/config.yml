@@ -12,7 +12,8 @@ jobs:
       - image: ponylang/ponyc:latest
     steps:
       - checkout
-      - run: make test
+      - run: make test config=debug
+      - run: make test config=release
 
 workflows:
   version: 2
